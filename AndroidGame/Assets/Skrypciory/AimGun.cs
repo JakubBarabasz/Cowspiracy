@@ -24,9 +24,6 @@ public class AimGun : MonoBehaviour
 
     void Update()
     {
-    
-
-
         magicWandOnHand();
         fireWandOnHand();
         void magicWandOnHand()
@@ -73,7 +70,7 @@ public class AimGun : MonoBehaviour
 
                     void fireBullet(Vector2 direction, float rotationZ)
                     {
-                        for(int i = 0; i<5; i++)
+                        for (int i = 0; i < 5; i++)
                         {
                             GameObject BULLET = Instantiate(magicBulletSheet);
                             BULLET.transform.position = magicBulletStart.transform.position;
@@ -85,7 +82,7 @@ public class AimGun : MonoBehaviour
                 }
             }
         }
-           
+
 
         void fireWandOnHand()
         {

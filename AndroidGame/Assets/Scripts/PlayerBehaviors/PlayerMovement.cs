@@ -1,10 +1,12 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public Joystick joystick;
-    public PlayerHealthbar Healthbar;
     private Rigidbody2D _rigidbody;
+    public TextMeshProUGUI HPUIAmount;
     private float horizontalMove;
     private float verticalmove;
     public Vector3 respawnPoint;
@@ -17,18 +19,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 60;
         _rigidbody = GetComponent<Rigidbody2D>();
         Hitpoints = MaxHitpoints;
-        MaxHitpoints = 11;
-        Hitpoints = 11;
-        Healthbar.SetHealth(Hitpoints, MaxHitpoints);
+        MaxHitpoints = 10;
+        Hitpoints = 10;
         respawnPoint = transform.position;
         DeathScreen.gameObject.SetActive(false);
-        TakeHit(1);
+        TakeHit(5);
     }
     void Update()
     {
-
+        HPUIAmount.text = Convert.ToString(Hitpoints);
         var movement = joystick.Horizontal;
 
         if(movement >= .2f)
@@ -48,13 +50,6 @@ public class PlayerMovement : MonoBehaviour
         if (!Mathf.Approximately(0, movement))
             transform.rotation = movement < 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
 
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            pressCount++;
-            Debug.Log("Button Pressed" + pressCount);
-        }
-
         if (Hitpoints <= 0)
         {
             DeathScreen.gameObject.SetActive(true);
@@ -72,12 +67,10 @@ public class PlayerMovement : MonoBehaviour
     public void TakeHit(float damage)
     {
         Hitpoints -= damage;
-        Healthbar.SetHealth(Hitpoints, MaxHitpoints);
     }
     public void GetHealth(float damage)
     {
         Hitpoints += damage;
-        Healthbar.SetHealth(Hitpoints, MaxHitpoints);
     }
 
     void OnCollisionEnter2D(Collision2D collision)

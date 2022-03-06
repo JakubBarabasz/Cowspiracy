@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
@@ -33,5 +31,5 @@ public class MovingPlatform : MonoBehaviour
             moveUp = false;
         }
     }
-   
+
 }

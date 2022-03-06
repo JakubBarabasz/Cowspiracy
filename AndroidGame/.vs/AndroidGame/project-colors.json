@@ -10,7 +10,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Różne pliki",
       "ColorIndex": -1
+    },
+    "dc3629df-6483-8298-f255-2e33ac04321f": {
+      "ProjectGuid": "dc3629df-6483-8298-f255-2e33ac04321f",
+      "DisplayName": "Assembly-CSharp-Editor",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

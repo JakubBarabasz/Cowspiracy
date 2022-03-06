@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - FallDetector
+  - Enemy
+  - Bullet
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
