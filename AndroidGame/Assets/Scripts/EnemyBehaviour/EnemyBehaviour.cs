@@ -7,15 +7,18 @@ public class EnemyBehaviour : MonoBehaviour
     public float MaxHitpoints = 5;
     public EnemyHealthBar Healthbar;
     public bool isCollPlayer = false;
+    public AudioSource hitSound;
 
     void Start()
     {
         Hitpoints = MaxHitpoints;
         Healthbar.SetHealth(Hitpoints, MaxHitpoints);
+        hitSound = GetComponent<AudioSource>();
     }
 
     public void TakeHit(float damage)
     {
+        hitSound.Play();
         Hitpoints -= damage;
         Healthbar.SetHealth(Hitpoints, MaxHitpoints);
 

@@ -5589,7 +5589,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1978877356}
         m_TargetAssemblyTypeName: JumpButton, Assembly-CSharp
-        m_MethodName: newJump
+        m_MethodName: StartLetsJump
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10914,7 +10914,7 @@ RectTransform:
   m_GameObject: {fileID: 1073959030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -165}
-  m_LocalScale: {x: 0.19936001, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 2024692873}
   m_Father: {fileID: 1113630886}
@@ -10922,7 +10922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.067, y: -0.0297}
+  m_AnchoredPosition: {x: 0.144, y: -0.005}
   m_SizeDelta: {x: 0.1850773, y: 0.2819276}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1073959032
@@ -11562,7 +11562,7 @@ RectTransform:
   m_GameObject: {fileID: 1113630885}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1000, y: 1000, z: 1}
+  m_LocalScale: {x: 500, y: 500, z: 1}
   m_Children:
   - {fileID: 1073959031}
   m_Father: {fileID: 1467731710}
@@ -11570,7 +11570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -439.5, y: -59.3}
+  m_AnchoredPosition: {x: -645, y: -88.8}
   m_SizeDelta: {x: 0.15997314, y: 0.16000366}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1113630887
@@ -11593,7 +11593,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 15fc62b5e41bdb7488a5eef1a0648690, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce69dc92fdbbcc44a87161002eabae0e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17375,7 +17375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -650, y: -93.4}
+  m_AnchoredPosition: {x: -450, y: -93.4}
   m_SizeDelta: {x: 0.15997314, y: 0.16000366}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1780766684
@@ -20398,17 +20398,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457f6bd93ec7b214d83d85e88ce23706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrounded: 0
-  isJumping: 0
-  jumpTime: 0.25
-  jumpTimeCounter: 0
-  checkRadious: 3
-  fallMultiplier: 0.25
-  lowJumpMultiplier: 0
-  feetPos: {fileID: 1099007552}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
   jumpSpeed: 3
   jumpDelay: 1
   jumpForce: 20
@@ -21377,7 +21366,6 @@ GameObject:
   - component: {fileID: 2064471872}
   - component: {fileID: 2064471871}
   - component: {fileID: 2064471870}
-  - component: {fileID: 2064471873}
   - component: {fileID: 2064471874}
   m_Layer: 0
   m_Name: Main Camera
@@ -21452,18 +21440,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2064471873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064471869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 331f79973e8cf494386c0151deb6eea3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2064471874
 MonoBehaviour:
   m_ObjectHideFlags: 0
