@@ -36,8 +36,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
-    Unity.Mobile.AndroidLogcat.Editor.dll:
-    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -343,7 +341,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9070}
     - Class: 114
-      Script: {instanceID: 22742}
+      Script: {instanceID: 30986}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1627,7 +1625,7 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 08a085cb6d6e7a8e62cff0aa82cc142a
+      Hash: c6b2de56e3b02fb22ae25fe3ef1af28e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerBehaviour
