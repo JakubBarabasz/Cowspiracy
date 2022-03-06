@@ -9,6 +9,9 @@ public class StopGame : MonoBehaviour
     public GameObject Controlls2;
     public GameObject Controlls3;
     public GameObject Controlls4;
+    public GameObject Controlls5;
+    public GameObject Controlls6;
+    public GameObject Controlls7;
     private void Start()
     {
         StopScreen.gameObject.SetActive(false);
@@ -16,6 +19,9 @@ public class StopGame : MonoBehaviour
         Controlls2.gameObject.SetActive(true);
         Controlls3.gameObject.SetActive(true);
         Controlls4.gameObject.SetActive(true);
+        Controlls5.gameObject.SetActive(true);
+        Controlls6.gameObject.SetActive(true);
+        Controlls7.gameObject.SetActive(true);
     }
     public void Stop()
     {
@@ -25,6 +31,9 @@ public class StopGame : MonoBehaviour
         Controlls2.gameObject.SetActive(false);
         Controlls3.gameObject.SetActive(false);
         Controlls4.gameObject.SetActive(false);
+        Controlls5.gameObject.SetActive(false);
+        Controlls6.gameObject.SetActive(false);
+        Controlls7.gameObject.SetActive(false);
     }
     public void Resume()
     {
@@ -34,6 +43,9 @@ public class StopGame : MonoBehaviour
         Controlls2.gameObject.SetActive(true);
         Controlls3.gameObject.SetActive(true);
         Controlls4.gameObject.SetActive(true);
+        Controlls5.gameObject.SetActive(true);
+        Controlls6.gameObject.SetActive(true);
+        Controlls7.gameObject.SetActive(true);
     }
 }
 

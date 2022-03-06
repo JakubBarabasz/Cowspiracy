@@ -85,10 +85,10 @@
     <Compile Include="Assets\Skrypciory\PlayerBehaviour.cs" />
     <Compile Include="Assets\Skrypciory\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\PlayerShooting.cs" />
-    <Compile Include="Assets\Scripts\SpikesDam.cs" />
-    <Compile Include="Assets\Scripts\UI\knifeAmountUI.cs" />
-    <Compile Include="Assets\Scripts\AddHealth.cs" />
-    <Compile Include="Assets\Scripts\AddKnife.cs" />
+    <Compile Include="Assets\Scripts\UI\AddKnife.cs" />
+    <Compile Include="Assets\Scripts\UI\SpikesDam.cs" />
+    <Compile Include="Assets\Scripts\UI\AddCoins.cs" />
+    <Compile Include="Assets\Scripts\UI\AddHealth.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

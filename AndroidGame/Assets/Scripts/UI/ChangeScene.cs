@@ -19,21 +19,6 @@ public class ChangeScene : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            pressCount++;
-            Debug.Log("Button Pressed" + pressCount);
-        }
-        if (pressCount % 2 == 0)
-        {
-            StageControll.gameObject.SetActive(false);
-            Time.timeScale = 1;
-        }
-        else
-        {
-            StageControll.gameObject.SetActive(true);
-            Time.timeScale = 1;
-        }
 
     }
 
