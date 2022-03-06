@@ -22,10 +22,6 @@ public class ChangeScene : MonoBehaviour
 
     }
 
-    public void StageMenu()
-    {
-        Application.Quit();
-    }
     public void Quit()
     {
         Application.Quit();
