@@ -17,9 +17,9 @@ public class PlayerBehaviour : MonoBehaviour
     public Transform feetPos;
     public GameObject DeathScreen;
     public float checkRadious;
-    public LayerMask whatIsGround;
     public float fallMultiplier;
     public float lowJumpMultiplier;
+    public LayerMask whatIsGround;
     public int pressCount = 0;
     void Start()
     {
