@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D _rigidbody;
     public float Speed;
 
 
     private void FixedUpdate()
     {
-        rigidbody.velocity = transform.right * Speed * Time.deltaTime;
+        _rigidbody.velocity = transform.right * Speed * Time.deltaTime;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -6,12 +6,15 @@ public class ChangeScene : MonoBehaviour
 {
     [System.Obsolete]
     public GameObject StageControll;
-    int pressCount = 0; // global
+
+    [System.Obsolete]
     private void Start()
     {
         StageControll.gameObject.SetActive(false);
         Time.timeScale = 1;
     }
+
+    [System.Obsolete]
     public void ChangeToScene(string sceneChangeto)
     {
         Application.LoadLevel(sceneChangeto);

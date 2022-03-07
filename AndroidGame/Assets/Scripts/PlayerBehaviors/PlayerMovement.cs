@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator anim;
+    public AudioSource healthSound;
     public Joystick joystick;
     private Rigidbody2D _rigidbody;
     public TextMeshProUGUI HPUIAmount;
@@ -27,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         Application.targetFrameRate = 60;
         _rigidbody = GetComponent<Rigidbody2D>();
         Hitpoints = MaxHitpoints;
@@ -53,13 +56,17 @@ public class PlayerMovement : MonoBehaviour
         if(movement >= .2f)
         {
             horizontalMove = MovementSpeed;
-        }else if(movement <= -.2f)
+            anim.SetBool("isRunning", true);
+        }
+        else if(movement <= -.2f)
         {
             horizontalMove = -MovementSpeed;
+            anim.SetBool("isRunning", true);
         }
         else
         {
             horizontalMove = 0;
+            anim.SetBool("isRunning", false);
         }
 
          transform.position += MovementSpeed * Time.deltaTime * new Vector3(movement, 0, 0);
@@ -92,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void GetHealth(float damage)
     {
+        healthSound.Play();
         Hitpoints += damage;
     }
 

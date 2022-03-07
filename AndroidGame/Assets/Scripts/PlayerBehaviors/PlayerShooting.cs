@@ -6,6 +6,7 @@ using System.Globalization;
 public class PlayerShooting : MonoBehaviour
 {
     [SerializeField]
+    public AudioSource getKnifes;
     public TextMeshProUGUI knifeUIAmount;
     public GameObject knife;
     public Transform throwPos;
@@ -21,6 +22,7 @@ public class PlayerShooting : MonoBehaviour
     }
     public void GetKnife(int knifes)
     {
+        getKnifes.Play();
         knifeAmount += knifes;
     }
     //Strzał
