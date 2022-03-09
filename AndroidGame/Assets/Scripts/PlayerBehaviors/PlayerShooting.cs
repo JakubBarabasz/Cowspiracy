@@ -1,8 +1,6 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using System;
-using System.Globalization;
 public class PlayerShooting : MonoBehaviour
 {
     [SerializeField]
@@ -20,10 +18,11 @@ public class PlayerShooting : MonoBehaviour
     { 
         knifeUIAmount.text = Convert.ToString(knifeAmount);
     }
-    public void GetKnife(int knifes)
+    public int GetKnife(int knifes)
     {
         getKnifes.Play();
         knifeAmount += knifes;
+        return knifes;
     }
     //Strzał
     public void Shoot()
@@ -37,11 +36,10 @@ public class PlayerShooting : MonoBehaviour
             newKnife.transform.rotation = transform.rotation;
             Destroy(newKnife, 1);
         }
-        //~~TODO usunąć CheatCode 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            knifeUIAmount.text = Convert.ToString(knifeAmount);
-            knifeAmount = 12;
-        }
+    }
+
+    public void BuyKnifes()
+    {
+            GetKnife(2);    
     }
 }

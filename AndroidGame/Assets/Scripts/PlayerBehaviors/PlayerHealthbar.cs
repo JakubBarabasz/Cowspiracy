@@ -13,7 +13,6 @@ public class PlayerHealthbar : MonoBehaviour
         PlayerHP.gameObject.SetActive(health < maxHealth);
         PlayerHP.value = health;
         PlayerHP.maxValue = maxHealth;
-
         PlayerHP.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low, High, PlayerHP.normalizedValue);
     }
 

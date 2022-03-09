@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool haveMoney;
     JumpButton jumpButton = new JumpButton();
+    public GameObject InShopAlertNoMoney;
     public Animator anim;
     public AudioSource healthSound;
+    public AudioSource coinsSound;
     public Joystick joystick;
     private Rigidbody2D _rigidbody;
     public TextMeshProUGUI HPUIAmount;
@@ -27,8 +30,11 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Controlls6;
     public GameObject Controlls7;
     public GameObject DeathScreen;
+    public GameObject ShopScreen;
     void Start()
     {
+        haveMoney = false;
+        InShopAlertNoMoney.SetActive(false);
         anim = GetComponent<Animator>();
         Application.targetFrameRate = 60;
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -46,10 +52,16 @@ public class PlayerMovement : MonoBehaviour
         Controlls6.gameObject.SetActive(false);
         Controlls7.gameObject.SetActive(false);
         DeathScreen.gameObject.SetActive(false);
+        ShopScreen.gameObject.SetActive(false);
         TakeHit(5);
     }
     void Update()
     {
+        if (coins <= 0) { }
+        else
+        {
+            haveMoney = true;
+        }
         HPUIAmount.text = Convert.ToString(Hitpoints);
         CoinsUIAmount.text = Convert.ToString(coins);
         var movement = joystick.Horizontal;
@@ -70,11 +82,6 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
 
-        if(movement > 0 && !jumpButton.isGrounded)
-        {
-            anim.SetBool("isJumping", true);
-        }
-
          transform.position += MovementSpeed * Time.deltaTime * new Vector3(movement, 0, 0);
 
         if (!Mathf.Approximately(0, movement))
@@ -90,13 +97,19 @@ public class PlayerMovement : MonoBehaviour
             Controlls5.gameObject.SetActive(false);
             Controlls6.gameObject.SetActive(false);
             Controlls7.gameObject.SetActive(false);
+            ShopScreen.gameObject.SetActive(false);
             Destroy(gameObject);
             Time.timeScale = 0;
         }
     }
     public void GetCoins(float addMoney)
     {
+        coinsSound.Play();
         coins += addMoney;
+    }
+    public void LoseCoins(float loseMoney)
+    {
+        coins -= loseMoney;
     }
 
     public void TakeHit(float damage)
@@ -111,7 +124,6 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-
         if (collision.gameObject.tag == "FallDetector")
         {
             transform.position = respawnPoint;
@@ -120,6 +132,68 @@ public class PlayerMovement : MonoBehaviour
         {
             isCollide = true;
             respawnPoint = transform.position;
+        }
+
+        if(collision.gameObject.tag == "Merchant")
+        {
+            Controlls1.gameObject.SetActive(false);
+            Controlls2.gameObject.SetActive(false);
+            Controlls3.gameObject.SetActive(false);
+            Controlls4.gameObject.SetActive(false);
+            Controlls5.gameObject.SetActive(true);
+            Controlls6.gameObject.SetActive(true);
+            Controlls7.gameObject.SetActive(true);
+            ShopScreen.gameObject.SetActive(true);
+            Time.timeScale = 0;
+            horizontalMove = 0;
+        }
+    }
+
+    public void OnCollisionExit(Collision collision)
+    {
+
+        if (collision.gameObject.tag == "Merchant")
+        {
+            Controlls1.gameObject.SetActive(true);
+            Controlls2.gameObject.SetActive(true);
+            Controlls3.gameObject.SetActive(true);
+            Controlls4.gameObject.SetActive(true);
+            Controlls5.gameObject.SetActive(true);
+            Controlls6.gameObject.SetActive(true);
+            Controlls7.gameObject.SetActive(true);
+            ShopScreen.gameObject.SetActive(false);
+        };
+    }
+    public bool GetHaveMoney()
+    {
+        return haveMoney;
+    }
+
+    public void BuyHP()
+    {
+        if(coins <= 4)
+        {
+            InShopAlertNoMoney.SetActive(true);
+        }
+        else
+        {
+            LoseCoins(5);
+            GetHealth(10);
+            InShopAlertNoMoney.SetActive(false);
+        }
+    }
+
+    public void BuyKnifes()
+    {
+        if (coins <= 1)
+        {
+            InShopAlertNoMoney.SetActive(true);
+            haveMoney = false;
+        }
+        else
+        {
+            haveMoney = true;
+            LoseCoins(2);
         }
     }
 }
