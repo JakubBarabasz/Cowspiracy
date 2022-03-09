@@ -13,18 +13,10 @@ public class ChangeScene : MonoBehaviour
         StageControll.gameObject.SetActive(false);
         Time.timeScale = 1;
     }
-
-    [System.Obsolete]
     public void ChangeToScene(string sceneChangeto)
     {
         Application.LoadLevel(sceneChangeto);
     }
-    private void Update()
-    {
-
-
-    }
-
     public void Quit()
     {
         Application.Quit();

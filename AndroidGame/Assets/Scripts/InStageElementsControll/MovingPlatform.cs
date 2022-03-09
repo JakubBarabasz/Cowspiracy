@@ -4,7 +4,6 @@ public class MovingPlatform : MonoBehaviour
 {
     public float moveSpeed;
     public bool moveUp;
-    // Update is called once per frame
     void Update()
     {
 
@@ -17,11 +16,11 @@ public class MovingPlatform : MonoBehaviour
             transform.position = new Vector2(transform.position.x, transform.position.y - moveSpeed * Time.deltaTime);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
 
-        var upElement = collision.collider.gameObject.tag == "Block";
-        var downElement = collision.collider.gameObject.tag == "Chest";
+        var upElement = collision.collider.gameObject.tag == "upElement";
+        var downElement = collision.collider.gameObject.tag == "downElement";
         if (upElement)
         {
             moveUp = true;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    JumpButton jumpButton = new JumpButton();
     public Animator anim;
     public AudioSource healthSound;
     public Joystick joystick;
@@ -13,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalMove;
     private float verticalmove;
     public Vector3 respawnPoint;
-    public GameObject DeathScreen;
     public float MovementSpeed = 5;
     public bool isCollide = false;
     public float Hitpoints = 10;
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Controlls5;
     public GameObject Controlls6;
     public GameObject Controlls7;
-
+    public GameObject DeathScreen;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         Controlls5.gameObject.SetActive(false);
         Controlls6.gameObject.SetActive(false);
         Controlls7.gameObject.SetActive(false);
+        DeathScreen.gameObject.SetActive(false);
         TakeHit(5);
     }
     void Update()
@@ -67,6 +68,11 @@ public class PlayerMovement : MonoBehaviour
         {
             horizontalMove = 0;
             anim.SetBool("isRunning", false);
+        }
+
+        if(movement > 0 && !jumpButton.isGrounded)
+        {
+            anim.SetBool("isJumping", true);
         }
 
          transform.position += MovementSpeed * Time.deltaTime * new Vector3(movement, 0, 0);
@@ -112,8 +118,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.gameObject.tag == "CheckPoint")
         {
+            isCollide = true;
             respawnPoint = transform.position;
         }
-
     }
 }

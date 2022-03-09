@@ -145,9 +145,9 @@ TextureImporter:
       name: stageFour_1
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 2
-        width: 14
+        width: 28
         height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

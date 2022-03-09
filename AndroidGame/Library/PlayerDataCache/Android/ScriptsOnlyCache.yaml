@@ -4,10 +4,10 @@ ScriptsOnlyBuild:
     - AddCoins
     - AddHealth
     - AddKnife
-    - BackGroundSound
-    - BackGroundStop
     - Bullet
     - ChangeScene
+    - DestroyMusic
+    - DontDestroyMusic
     - EnemyBehaviour
     - EnemyHealthBar
     - FixedJoystick
@@ -18,6 +18,7 @@ ScriptsOnlyBuild:
     - PlayerShooting
     - SpikesDam
     - StopGame
+    - TypeWriterEffect
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineComposer
@@ -37,6 +38,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
+    Unity.Mobile.AndroidLogcat.Editor.dll:
+    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -45,6 +48,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -56,6 +67,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Slider
   sceneClasses:
     Assets/Scenes/ChooseStage.unity:
@@ -154,6 +166,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6872}
     - Class: 114
       Script: {instanceID: 7270}
+    - Class: 114
+      Script: {instanceID: 7518}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -292,6 +306,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2184}
     - Class: 114
+      Script: {instanceID: 2476}
+    - Class: 114
       Script: {instanceID: 2764}
     - Class: 114
       Script: {instanceID: 2842}
@@ -318,6 +334,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4682}
     - Class: 114
+      Script: {instanceID: 4698}
+    - Class: 114
       Script: {instanceID: 5276}
     - Class: 114
       Script: {instanceID: 5386}
@@ -338,15 +356,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7270}
     - Class: 114
-      Script: {instanceID: 7974}
+      Script: {instanceID: 7518}
     - Class: 114
-      Script: {instanceID: 8162}
+      Script: {instanceID: 7976}
     - Class: 114
-      Script: {instanceID: 8788}
+      Script: {instanceID: 8164}
     - Class: 114
-      Script: {instanceID: 9070}
+      Script: {instanceID: 8790}
     - Class: 114
-      Script: {instanceID: 35422}
+      Script: {instanceID: 9072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -880,7 +898,7 @@ ScriptsOnlyBuild:
     className: AddHealth
   - hash:
       serializedVersion: 2
-      Hash: 4d62d5ac6cddd04596a4fa2edd6a2168
+      Hash: 333e0e8210d723def6cc46f538f8c976
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -1033,7 +1051,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: BackGroundStop
+    className: DestroyMusic
   - hash:
       serializedVersion: 2
       Hash: ffd3ed4fcd23b3e7745287c99a637247
@@ -1138,7 +1156,7 @@ ScriptsOnlyBuild:
     className: BufferManager
   - hash:
       serializedVersion: 2
-      Hash: bbfd66bd7e7c7425d8981ce56888221d
+      Hash: 60dd1ce11f993b7d83be14226f78f814
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JumpButton
@@ -1222,10 +1240,10 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
-      Hash: 54b5ccfaacefa4a6b118e5f3ee918046
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: BackGroundSound
+    className: DontDestroyMusic
   - hash:
       serializedVersion: 2
       Hash: 59ce5902048c1041729c804e2772b2ce
@@ -1432,12 +1450,6 @@ ScriptsOnlyBuild:
     className: CinemachineImpulseSource
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BackGroundNext
-  - hash:
-      serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -1460,6 +1472,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: e05bb809fe5f269222908966c50ecc11
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TypeWriterEffect
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1516,7 +1534,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 58c25a91d204182f2392cd3d04b04dc2
+      Hash: 8ef7e39f2474ddeb632bdcf4aebd668a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Bullet
@@ -1726,7 +1744,7 @@ ScriptsOnlyBuild:
     className: StateMachine
   - hash:
       serializedVersion: 2
-      Hash: bae0786c0c23b1318bff603baafb1e69
+      Hash: 9a3773bfa942d71b1aef4d6d4dee62f7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerShooting

@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Bullet
   - CheckPoint
+  - upElement
+  - downElement
   layers:
   - Default
   - TransparentFX

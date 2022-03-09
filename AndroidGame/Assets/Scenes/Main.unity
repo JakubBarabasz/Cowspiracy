@@ -399,7 +399,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.15752934, g: 0.27970606, b: 0.4716981, a: 0}
+  m_BackGroundColor: {r: 0.16862746, g: 0.16862746, b: 0.16862746, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -693,7 +693,7 @@ RectTransform:
   m_GameObject: {fileID: 1290810577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -214}
-  m_LocalScale: {x: 0.045454543, y: 0.045454543, z: 1}
+  m_LocalScale: {x: 0.03545454, y: 0.03545454, z: 1}
   m_Children: []
   m_Father: {fileID: 1938636485}
   m_RootOrder: 1
@@ -701,7 +701,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.0000019073, y: -13.6}
-  m_SizeDelta: {x: 360, y: 200}
+  m_SizeDelta: {x: 700, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1290810579
 MonoBehaviour:
@@ -722,7 +722,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -732,10 +732,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: -3941441729332587117, guid: 22559a382746db747bc900175918ed42, type: 3}
-    m_PressedSprite: {fileID: -3941441729332587117, guid: 22559a382746db747bc900175918ed42, type: 3}
-    m_SelectedSprite: {fileID: -3941441729332587117, guid: 22559a382746db747bc900175918ed42, type: 3}
-    m_DisabledSprite: {fileID: -3941441729332587117, guid: 22559a382746db747bc900175918ed42, type: 3}
+    m_HighlightedSprite: {fileID: -2726522430756728411, guid: 8d654114a775e6342ac96f10b9bbaf5b, type: 3}
+    m_PressedSprite: {fileID: -2726522430756728411, guid: 8d654114a775e6342ac96f10b9bbaf5b, type: 3}
+    m_SelectedSprite: {fileID: -2726522430756728411, guid: 8d654114a775e6342ac96f10b9bbaf5b, type: 3}
+    m_DisabledSprite: {fileID: -2726522430756728411, guid: 8d654114a775e6342ac96f10b9bbaf5b, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -869,7 +869,7 @@ RectTransform:
   m_GameObject: {fileID: 1470895665}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -214}
-  m_LocalScale: {x: 0.045454543, y: 0.045454543, z: 1}
+  m_LocalScale: {x: 0.03545454, y: 0.03545454, z: 1}
   m_Children: []
   m_Father: {fileID: 1938636485}
   m_RootOrder: 0
@@ -877,7 +877,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0000014305, y: -1.3}
-  m_SizeDelta: {x: 360, y: 200}
+  m_SizeDelta: {x: 700, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1470895667
 MonoBehaviour:
@@ -898,7 +898,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -908,10 +908,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 3107364919429077628, guid: 99a48ed741c270d46b1717cdf688205b, type: 3}
-    m_PressedSprite: {fileID: 3107364919429077628, guid: 99a48ed741c270d46b1717cdf688205b, type: 3}
-    m_SelectedSprite: {fileID: 3107364919429077628, guid: 99a48ed741c270d46b1717cdf688205b, type: 3}
-    m_DisabledSprite: {fileID: 3107364919429077628, guid: 99a48ed741c270d46b1717cdf688205b, type: 3}
+    m_HighlightedSprite: {fileID: -4651081421511301455, guid: f79e8bc688f5ca94a95207e816071e88, type: 3}
+    m_PressedSprite: {fileID: -4651081421511301455, guid: f79e8bc688f5ca94a95207e816071e88, type: 3}
+    m_SelectedSprite: {fileID: -4651081421511301455, guid: f79e8bc688f5ca94a95207e816071e88, type: 3}
+    m_DisabledSprite: {fileID: -4651081421511301455, guid: f79e8bc688f5ca94a95207e816071e88, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
