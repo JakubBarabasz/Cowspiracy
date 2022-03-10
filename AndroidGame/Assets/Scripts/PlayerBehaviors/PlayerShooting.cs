@@ -36,10 +36,4 @@ public class PlayerShooting : MonoBehaviour
             newKnife.transform.rotation = transform.rotation;
             Destroy(newKnife, 1);
         }
-    }
-
-    public void BuyKnifes()
-    {
-            GetKnife(2);    
-    }
-}
+    }}

@@ -1,11 +1,11 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     public bool haveMoney;
-    JumpButton jumpButton = new JumpButton();
     public GameObject InShopAlertNoMoney;
     public Animator anim;
     public AudioSource healthSound;
@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public float Hitpoints = 10;
     public float MaxHitpoints = 5;
     public float coins = 0;
+    public float playerHitStrength = 2;
     public GameObject Controlls1;
     public GameObject Controlls2;
     public GameObject Controlls3;
@@ -31,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Controlls7;
     public GameObject DeathScreen;
     public GameObject ShopScreen;
+    public bool isCollEnemy = false;
+    private bool canTakeDamage = true;
+
     void Start()
     {
         haveMoney = false;
@@ -62,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         {
             haveMoney = true;
         }
-        HPUIAmount.text = Convert.ToString(Hitpoints);
+        HPUIAmount.text = Convert.ToString(Hitpoints + " / " + MaxHitpoints);
         CoinsUIAmount.text = Convert.ToString(coins);
         var movement = joystick.Horizontal;
 
@@ -86,6 +90,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (!Mathf.Approximately(0, movement))
             transform.rotation = movement < 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
+
+        if(Hitpoints > MaxHitpoints)
+        {
+            Hitpoints = MaxHitpoints;
+        }
+
 
         if (Hitpoints <= 0)
         {
@@ -120,6 +130,10 @@ public class PlayerMovement : MonoBehaviour
     {
         healthSound.Play();
         Hitpoints += damage;
+    }
+    public void UpgradeMaxHealth(float damage)
+    {
+        MaxHitpoints += damage;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -164,6 +178,41 @@ public class PlayerMovement : MonoBehaviour
             ShopScreen.gameObject.SetActive(false);
         };
     }
+
+    public void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            isCollEnemy = true;
+        }
+        else
+        {
+            isCollEnemy = false;
+        }
+        var enemy = collision.collider.GetComponent<EnemyBehaviour>();
+
+        //int randHit = rnd.Next(3, 5);
+        if (isCollEnemy && canTakeDamage)
+        {
+            StartCoroutine(WaitForSeconds());
+            enemy.TakeHit(2);
+        }
+
+    }
+    IEnumerator WaitForSeconds()
+    {
+        canTakeDamage = false;
+        yield return new WaitForSecondsRealtime(0.1f);
+        canTakeDamage = true;
+    }
+
+
+
+
+    /// <summary>
+    /// Shop Behaviours
+    /// </summary>
+    /// <returns>buying methods</returns>
     public bool GetHaveMoney()
     {
         return haveMoney;
@@ -178,22 +227,23 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             LoseCoins(5);
-            GetHealth(10);
+            GetHealth(50);
             InShopAlertNoMoney.SetActive(false);
         }
     }
 
-    public void BuyKnifes()
+    public void BuyMaxHP()
     {
-        if (coins <= 1)
+        if (coins <= 19)
         {
             InShopAlertNoMoney.SetActive(true);
-            haveMoney = false;
         }
         else
         {
-            haveMoney = true;
-            LoseCoins(2);
+            LoseCoins(20);
+            UpgradeMaxHealth(3);
+            InShopAlertNoMoney.SetActive(false);
         }
     }
+
 }

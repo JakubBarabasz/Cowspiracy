@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Random = System.Random;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class EnemyBehaviour : MonoBehaviour
     public EnemyHealthBar Healthbar;
     public bool isCollPlayer = false;
     public AudioSource hitSound;
+    public bool canTakeDamage = true;
 
     void Start()
     {
@@ -28,8 +30,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
 
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -39,16 +40,20 @@ public class EnemyBehaviour : MonoBehaviour
         {
             isCollPlayer = false;
         }
-
+       // Random rnd = new Random();
         var player = collision.collider.GetComponent<PlayerMovement>();
-        if (player && isCollPlayer)
-        {
-            StartCoroutine(SomeCoroutine());
-        }
-        IEnumerator SomeCoroutine()
-        {
-            player.TakeHit(1);
-            yield return new WaitForSeconds(1);
-        }
+   
+            //int randHit = rnd.Next(3, 5);
+            if (isCollPlayer && canTakeDamage)
+            {
+                StartCoroutine(WaitForSeconds());
+                player.TakeHit(1);
+            }
+    }
+    IEnumerator WaitForSeconds()
+    {
+        canTakeDamage = false;
+        yield return new WaitForSecondsRealtime(0.7f);
+        canTakeDamage = true;
     }
 }
