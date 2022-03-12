@@ -77,12 +77,14 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Scripts\AudioControllers\DontDestroyMusic.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\Scripts\PlayerBehaviors\MeleeButton.cs" />
     <Compile Include="Assets\Skrypciory\ChestBehaviour\RareChest.cs" />
     <Compile Include="Assets\Scripts\InStageElementsControll\EnterHouseBehaviour.cs" />
     <Compile Include="Assets\Skrypciory\AimBullet.cs" />
     <Compile Include="Assets\UI pack\Scripts\FillValueNumber.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\StopGame.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\Scripts\PlayerBehaviors\PlayerMelee.cs" />
     <Compile Include="Assets\Scripts\UI\Dialogue\TypeWriterEffect.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\Bullet.cs" />
     <Compile Include="Assets\Skrypciory\BulletTwo.cs" />
@@ -92,7 +94,7 @@
     <Compile Include="Assets\Scripts\InStageElementsControll\AddCoins.cs" />
     <Compile Include="Assets\Scripts\InStageElementsControll\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\PlayerShooting.cs" />
-    <Compile Include="Assets\Scripts\PlayerBehaviors\PlayerMelee.cs" />
+    <Compile Include="Assets\Scripts\CowsBehaviours\FindCheck.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -179,36 +179,6 @@ public class PlayerMovement : MonoBehaviour
         };
     }
 
-    public void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            isCollEnemy = true;
-        }
-        else
-        {
-            isCollEnemy = false;
-        }
-        var enemy = collision.collider.GetComponent<EnemyBehaviour>();
-
-        //int randHit = rnd.Next(3, 5);
-        if (isCollEnemy && canTakeDamage)
-        {
-            StartCoroutine(WaitForSeconds());
-            enemy.TakeHit(2);
-        }
-
-    }
-    IEnumerator WaitForSeconds()
-    {
-        canTakeDamage = false;
-        yield return new WaitForSecondsRealtime(0.1f);
-        canTakeDamage = true;
-    }
-
-
-
-
     /// <summary>
     /// Shop Behaviours
     /// </summary>

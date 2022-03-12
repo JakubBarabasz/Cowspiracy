@@ -34,6 +34,6 @@ public class PlayerShooting : MonoBehaviour
             var newKnife = Instantiate(knife) as GameObject;
             newKnife.transform.position = throwPos.position;
             newKnife.transform.rotation = transform.rotation;
-            Destroy(newKnife, 1);
+            Destroy(newKnife, 0.5f);
         }
     }}
