@@ -86,8 +86,9 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
 
-         transform.position += MovementSpeed * Time.deltaTime * new Vector3(movement, 0, 0);
-
+        _rigidbody.AddForce(Vector2.right * MovementSpeed);
+         //transform.position += MovementSpeed * Time.deltaTime * new Vector3(movement, 0, 0);
+      
         if (!Mathf.Approximately(0, movement))
             transform.rotation = movement < 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
 
