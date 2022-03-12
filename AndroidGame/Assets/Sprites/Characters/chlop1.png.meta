@@ -136,12 +136,12 @@ TextureImporter:
       name: chlop1_0
       rect:
         serializedVersion: 2
-        x: 22
+        x: 21
         y: 18
-        width: 24
+        width: 25
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,12 +157,12 @@ TextureImporter:
       name: chlop1_1
       rect:
         serializedVersion: 2
-        x: 86
+        x: 85
         y: 18
-        width: 24
+        width: 25
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,10 +180,10 @@ TextureImporter:
         serializedVersion: 2
         x: 149
         y: 18
-        width: 24
+        width: 25
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,10 +201,10 @@ TextureImporter:
         serializedVersion: 2
         x: 213
         y: 18
-        width: 24
+        width: 25
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,10 +222,10 @@ TextureImporter:
         serializedVersion: 2
         x: 277
         y: 18
-        width: 24
+        width: 25
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,12 +241,12 @@ TextureImporter:
       name: chlop1_5
       rect:
         serializedVersion: 2
-        x: 342
+        x: 341
         y: 18
-        width: 24
+        width: 25
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

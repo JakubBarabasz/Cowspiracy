@@ -3,6 +3,9 @@ using UnityEngine.UI;
 
 public class EnemyHealthBar : MonoBehaviour
 {
+    public float offX = 0;
+    public float offY = 1;
+    public float offZ = 0;
     public Slider EnHP;
     public Color Low;
     public Color High;
@@ -20,7 +23,7 @@ public class EnemyHealthBar : MonoBehaviour
 
     void Update()
     {
-        Offset = new Vector3(0, 1, 0);
+        Offset = new Vector3(offX, offY, offZ);
         EnHP.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + Offset);
     }
 }

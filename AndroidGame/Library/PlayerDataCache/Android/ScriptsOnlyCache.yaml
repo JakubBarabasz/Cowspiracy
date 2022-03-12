@@ -475,6 +475,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 8962}
     - Class: 114
+      Script: {instanceID: 9270}
+    - Class: 114
       Script: {instanceID: 9828}
     - Class: 114
       Script: {instanceID: 10048}
@@ -1169,7 +1171,7 @@ ScriptsOnlyBuild:
     className: TextMeshPro
   - hash:
       serializedVersion: 2
-      Hash: 058e157072ad618e774167565c64b745
+      Hash: 7e84becf47f58922d79e00eda73880b4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyHealthBar
