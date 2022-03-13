@@ -1,7 +1,9 @@
 using UnityEngine;
-
+using Random = System.Random;
 public class Bullet : MonoBehaviour
 {
+    public bool randomHit;
+    public int hitsPoints;
     public Rigidbody2D _rigidbody;
     public float Speed;
 
@@ -14,11 +16,25 @@ public class Bullet : MonoBehaviour
     {
 
         var enemy = collision.collider.GetComponent<EnemyBehaviour>();
-        if (enemy)
+        if (randomHit)
         {
-            enemy.TakeHit(1);
-            Destroy(gameObject);
+            Random rand = new Random();
+            if (enemy)
+            {
+                enemy.TakeHit(rand.Next(1,5));
+                Destroy(gameObject);
+            }
         }
+        else
+        {
+            if (enemy)
+            {
+                enemy.TakeHit(hitsPoints);
+                Destroy(gameObject);
+            }
+        }
+     
+
         if (collision.collider.CompareTag("Bullet"))
         {
             Destroy(collision.gameObject);

@@ -23,10 +23,8 @@ public class EnemyBehaviour : MonoBehaviour
         hitSound.Play();
         Hitpoints -= damage;
         Healthbar.SetHealth(Hitpoints, MaxHitpoints);
-        var player = GetComponent<PlayerMovement>();
         if (0 >= Hitpoints)
         {
-            player.GetCoins(2);
             Destroy(gameObject);
         }
 
@@ -41,10 +39,8 @@ public class EnemyBehaviour : MonoBehaviour
         {
             isCollPlayer = false;
         }
-       // Random rnd = new Random();
         var player = collision.collider.GetComponent<PlayerMovement>();
-   
-            //int randHit = rnd.Next(3, 5);
+  
             if (isCollPlayer && canTakeDamage)
             {
                 StartCoroutine(WaitForSeconds());

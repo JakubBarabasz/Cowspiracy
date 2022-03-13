@@ -2005,7 +2005,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 8ef7e39f2474ddeb632bdcf4aebd668a
+      Hash: b90967309c046e05bba51ad6a420b233
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Bullet
