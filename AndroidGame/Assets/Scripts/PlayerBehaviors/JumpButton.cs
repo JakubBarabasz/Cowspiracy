@@ -12,8 +12,10 @@ public class JumpButton : MonoBehaviour
 	public float jumpForce = 0.00002f;
 	private bool canjump;
 	public Rigidbody2D _rigidbody;
+	public Joystick joystick;
+	public float movementVertical;
 
-    void Start()
+	void Start()
     {
 		canjump = true;
 		_rigidbody = GetComponent<Rigidbody2D>();
@@ -31,14 +33,26 @@ public class JumpButton : MonoBehaviour
         {
 			anim.SetBool("isJumping", true);
 		}
-    }
+		movementVertical = joystick.Vertical;
+		StartLetsJump();
+	}
 	
 	public void StartLetsJump(){
-		if (canjump && isGrounded){
+
+
+		if (movementVertical >= .4f)
+		{
+			if (canjump && isGrounded)
+			{
+				jumpAudio.Play();
+				isGrounded = false;
+				_rigidbody.velocity = Vector2.up * jumpForce;
+			}	if (canjump && isGrounded){
 			jumpAudio.Play();
 			isGrounded = false;
 			_rigidbody.velocity = Vector2.up * jumpForce;
         }
+		}
 	}
 	
 }

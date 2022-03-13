@@ -68,14 +68,14 @@ public class PlayerMovement : MonoBehaviour
         }
         HPUIAmount.text = Convert.ToString(Hitpoints + " / " + MaxHitpoints);
         CoinsUIAmount.text = Convert.ToString(coins);
-        var movement = joystick.Horizontal;
+        float movementHorizontal = joystick.Horizontal;
 
-        if(movement >= .2f)
+        if(movementHorizontal >= .2f)
         {
             horizontalMove = MovementSpeed;
             anim.SetBool("isRunning", true);
         }
-        else if(movement <= -.2f)
+        else if(movementHorizontal <= -.2f)
         {
             horizontalMove = -MovementSpeed;
             anim.SetBool("isRunning", true);
@@ -87,10 +87,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //_rigidbody.AddForce(Vector2.right * MovementSpeed);
-         transform.position += MovementSpeed * Time.deltaTime * new Vector3(movement, 0, 0);
+        transform.position += MovementSpeed * Time.deltaTime * new Vector3(movementHorizontal, 0, 0);
       
-        if (!Mathf.Approximately(0, movement))
-            transform.rotation = movement < 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
+        if (!Mathf.Approximately(0, movementHorizontal))
+            transform.rotation = movementHorizontal < 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
 
         if(Hitpoints > MaxHitpoints)
         {
