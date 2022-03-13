@@ -40,7 +40,7 @@ public class JumpButton : MonoBehaviour
 	public void StartLetsJump(){
 
 
-		if (movementVertical >= .4f)
+		if (movementVertical >= .2f)
 		{
 			if (canjump && isGrounded)
 			{
