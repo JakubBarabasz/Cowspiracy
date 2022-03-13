@@ -211,8 +211,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            healthSound.Play();
             LoseCoins(20);
-            UpgradeMaxHealth(3);
+            UpgradeMaxHealth(5);
             InShopAlertNoMoney.SetActive(false);
         }
     }

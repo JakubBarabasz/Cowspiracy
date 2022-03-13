@@ -24,10 +24,10 @@ public class EnemyBehaviour : MonoBehaviour
         Hitpoints -= damage;
         Healthbar.SetHealth(Hitpoints, MaxHitpoints);
         var player = GetComponent<PlayerMovement>();
-        if (Hitpoints <= 0)
+        if (0 >= Hitpoints)
         {
-            Destroy(gameObject);
             player.GetCoins(2);
+            Destroy(gameObject);
         }
 
     }

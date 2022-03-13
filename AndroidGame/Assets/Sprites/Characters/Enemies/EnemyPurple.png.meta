@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: -6777752460873654211
     second: EnemyPurple_2
+  - first:
+      213: -8401612780515548171
+    second: EnemyPurple_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -182,6 +185,27 @@ TextureImporter:
       bones: []
       spriteID: d30a8120c0690f1a0800000000000000
       internalID: -6777752460873654211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPurple_3
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f32df490b9776b80800000000000000
+      internalID: -8401612780515548171
       vertices: []
       indices: 
       edges: []
