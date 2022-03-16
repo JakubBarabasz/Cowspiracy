@@ -10,6 +10,7 @@ public class AddHealth : MonoBehaviour
         var player = collision.collider.GetComponent<PlayerMovement>();
         if (player)
         {
+            player.UpgradeMaxHealth(5);
             player.GetHealth(HP);
             Destroy(gameObject);
         }

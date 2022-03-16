@@ -43,9 +43,6 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         Application.targetFrameRate = 60;
         _rigidbody = GetComponent<Rigidbody2D>();
-        Hitpoints = MaxHitpoints;
-        MaxHitpoints = 10;
-        Hitpoints = 10;
         coins = 0;
         respawnPoint = transform.position;
         DeathScreen.gameObject.SetActive(false);
@@ -58,17 +55,20 @@ public class PlayerMovement : MonoBehaviour
         Controlls7.gameObject.SetActive(false);
         DeathScreen.gameObject.SetActive(false);
         ShopScreen.gameObject.SetActive(false);
-        TakeHit(5);
+        MaxHitpoints = 10;
+        Hitpoints = 10;
         //~TODO za ka¿dym razem przed kompilacj¹ zresetwoaæ Prefs
         coins = PlayerPrefs.GetFloat("playerCoins");
-        Hitpoints = PlayerPrefs.GetFloat("playerHealth");
-
+         Hitpoints = PlayerPrefs.GetFloat("playerHealth");
+        MaxHitpoints = PlayerPrefs.GetFloat("playerMaxHealth");
+        Hitpoints = MaxHitpoints;
     }
     void Update()
     {
         //~TODO za ka¿dym razem przed kompilacj¹ zresetwoaæ Prefs
-        PlayerPrefs.SetFloat("playerCoins", coins);
+       PlayerPrefs.SetFloat("playerCoins", coins);
        PlayerPrefs.SetFloat("playerHealth", Hitpoints);
+       PlayerPrefs.SetFloat("playerMaxHealth", MaxHitpoints);
 
         if (coins <= 0) { }
         else

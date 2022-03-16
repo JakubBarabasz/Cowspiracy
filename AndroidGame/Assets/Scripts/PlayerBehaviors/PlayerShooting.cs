@@ -13,9 +13,11 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         throwSound = GetComponent<AudioSource>();
+       knifeAmount = PlayerPrefs.GetInt("playerKnifes");
     }
     public void Update()
-    { 
+    {
+        PlayerPrefs.SetInt("playerHealth", knifeAmount);
         knifeUIAmount.text = Convert.ToString(knifeAmount);
     }
     public int GetKnife(int knifes)
