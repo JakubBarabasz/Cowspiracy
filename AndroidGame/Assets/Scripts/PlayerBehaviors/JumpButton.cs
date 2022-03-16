@@ -40,18 +40,14 @@ public class JumpButton : MonoBehaviour
 	public void StartLetsJump(){
 
 
-		if (movementVertical >= .2f)
+        if (movementVertical >= .25f)
 		{
 			if (canjump && isGrounded)
 			{
 				jumpAudio.Play();
 				isGrounded = false;
 				_rigidbody.velocity = Vector2.up * jumpForce;
-			}	if (canjump && isGrounded){
-			jumpAudio.Play();
-			isGrounded = false;
-			_rigidbody.velocity = Vector2.up * jumpForce;
-        }
+			}
 		}
 	}
 	

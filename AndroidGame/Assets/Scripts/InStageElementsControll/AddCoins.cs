@@ -3,11 +3,13 @@ using Random = System.Random;
 
 public class AddCoins : MonoBehaviour
 {
+    int minValue = 4;
+    int maxValue = 10;
     Random rnd = new Random();
     private int coins;
     void Start()
     {
-        coins = rnd.Next(4, 10);
+        coins = rnd.Next(minValue, maxValue);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

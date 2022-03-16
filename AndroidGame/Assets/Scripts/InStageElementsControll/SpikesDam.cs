@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpikesDam : MonoBehaviour
 {
-    public float Damage;
+    public float Damage = 25;
     void Start()
     {
 

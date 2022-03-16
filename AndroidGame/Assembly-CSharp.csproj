@@ -61,6 +61,8 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\MoveByTouch.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\PlayerHealthbar.cs" />
+    <Compile Include="Assets\Scripts\CowsBehaviours\FlagBehaviour.cs" />
+    <Compile Include="Assets\Scripts\InStageElementsControll\MovingPlatformHorizontal.cs" />
     <Compile Include="Assets\Scripts\InStageElementsControll\AddHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyBehaviour\EnemyHealthBar.cs" />

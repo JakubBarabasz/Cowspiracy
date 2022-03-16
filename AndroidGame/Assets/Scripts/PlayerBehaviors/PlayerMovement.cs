@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using TMPro;
+using Unity.Notifications.Android;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -58,9 +59,17 @@ public class PlayerMovement : MonoBehaviour
         DeathScreen.gameObject.SetActive(false);
         ShopScreen.gameObject.SetActive(false);
         TakeHit(5);
+        //~TODO za ka¿dym razem przed kompilacj¹ zresetwoaæ Prefs
+        coins = PlayerPrefs.GetFloat("playerCoins");
+        Hitpoints = PlayerPrefs.GetFloat("playerHealth");
+
     }
     void Update()
     {
+        //~TODO za ka¿dym razem przed kompilacj¹ zresetwoaæ Prefs
+        PlayerPrefs.SetFloat("playerCoins", coins);
+       PlayerPrefs.SetFloat("playerHealth", Hitpoints);
+
         if (coins <= 0) { }
         else
         {
@@ -141,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "FallDetector")
         {
+            TakeHit(1);
             transform.position = respawnPoint;
         }
         else if (collision.gameObject.tag == "CheckPoint")
