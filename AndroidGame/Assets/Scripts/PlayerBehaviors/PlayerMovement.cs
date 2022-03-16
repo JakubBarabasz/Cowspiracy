@@ -20,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 respawnPoint;
     public float MovementSpeed = 5;
     public bool isCollide = false;
-    public float Hitpoints = 10;
-    public float MaxHitpoints = 5;
+    public float Hitpoints;
+    public float MaxHitpoints;
     public float coins = 0;
     public float playerHitStrength = 2;
     public GameObject Controlls1;
@@ -57,18 +57,19 @@ public class PlayerMovement : MonoBehaviour
         ShopScreen.gameObject.SetActive(false);
         MaxHitpoints = 10;
         Hitpoints = 10;
+
         //~TODO za ka¿dym razem przed kompilacj¹ zresetwoaæ Prefs
         coins = PlayerPrefs.GetFloat("playerCoins");
-         Hitpoints = PlayerPrefs.GetFloat("playerHealth");
-        MaxHitpoints = PlayerPrefs.GetFloat("playerMaxHealth");
-        Hitpoints = MaxHitpoints;
+       //  Hitpoints = PlayerPrefs.GetFloat("playerHealth");
+        //MaxHitpoints = PlayerPrefs.GetFloat("playerMaxHealth");
+        GetHealth(MaxHitpoints);
     }
     void Update()
     {
         //~TODO za ka¿dym razem przed kompilacj¹ zresetwoaæ Prefs
        PlayerPrefs.SetFloat("playerCoins", coins);
-       PlayerPrefs.SetFloat("playerHealth", Hitpoints);
-       PlayerPrefs.SetFloat("playerMaxHealth", MaxHitpoints);
+      // PlayerPrefs.SetFloat("playerHealth", Hitpoints);
+      // PlayerPrefs.SetFloat("playerMaxHealth", MaxHitpoints);
 
         if (coins <= 0) { }
         else

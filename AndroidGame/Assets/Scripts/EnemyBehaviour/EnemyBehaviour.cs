@@ -4,6 +4,8 @@ using Random = System.Random;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    public float hitValue = 1;
+    public float hitSeconds = 0.7f;
     public float Hitpoints;
     public float MaxHitpoints = 5;
     public EnemyHealthBar Healthbar;
@@ -44,13 +46,13 @@ public class EnemyBehaviour : MonoBehaviour
             if (isCollPlayer && canTakeDamage)
             {
                 StartCoroutine(WaitForSeconds());
-                player.TakeHit(1);
+                player.TakeHit(hitValue);
             }
     }
     IEnumerator WaitForSeconds()
     {
         canTakeDamage = false;
-        yield return new WaitForSecondsRealtime(0.7f);
+        yield return new WaitForSecondsRealtime(hitSeconds);
         canTakeDamage = true;
     }
 }
