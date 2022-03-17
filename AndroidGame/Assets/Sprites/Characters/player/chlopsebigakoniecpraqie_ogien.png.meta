@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 8967d50b081f2f547abacd2abdd30c0b
+guid: 4f0a578d1e7aad642bb99fb9dc3f8158
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1767290984007320686
-    second: grandad_0
+      213: -69359379222301058
+    second: chlopsebigakoniecpraqie_ogien_0
   - first:
-      213: 5099912437641109557
-    second: grandad_1
+      213: -8664583679643075084
+    second: chlopsebigakoniecpraqie_ogien_1
   - first:
-      213: 6887527702687568244
-    second: grandad_2
+      213: 2050256910553408546
+    second: chlopsebigakoniecpraqie_ogien_2
   - first:
-      213: -1432281084959458757
-    second: grandad_3
+      213: 4008444720845334885
+    second: chlopsebigakoniecpraqie_ogien_3
+  - first:
+      213: -2546646057292482884
+    second: chlopsebigakoniecpraqie_ogien_4
+  - first:
+      213: -7461906400854640985
+    second: chlopsebigakoniecpraqie_ogien_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grandad_0
+      name: chlopsebigakoniecpraqie_ogien_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 25
-        width: 11
-        height: 17
+        x: 21
+        y: 18
+        width: 24
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29b3e7ba6325977e0800000000000000
-      internalID: -1767290984007320686
+      spriteID: e76fc971306990ff0800000000000000
+      internalID: -69359379222301058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grandad_1
+      name: chlopsebigakoniecpraqie_ogien_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 25
-        width: 11
-        height: 17
+        x: 85
+        y: 18
+        width: 24
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 530e13f675786c640800000000000000
-      internalID: 5099912437641109557
+      spriteID: 4fd3a30ec0731c780800000000000000
+      internalID: -8664583679643075084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grandad_2
+      name: chlopsebigakoniecpraqie_ogien_2
       rect:
         serializedVersion: 2
-        x: 6
-        y: 0
-        width: 11
-        height: 17
+        x: 149
+        y: 18
+        width: 24
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 471da5334f9659f50800000000000000
-      internalID: 6887527702687568244
+      spriteID: 22463d32cc9f37c10800000000000000
+      internalID: 2050256910553408546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grandad_3
+      name: chlopsebigakoniecpraqie_ogien_3
       rect:
         serializedVersion: 2
-        x: 31
-        y: 0
-        width: 11
-        height: 17
+        x: 213
+        y: 18
+        width: 24
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +210,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3afa7811f38f1ce0800000000000000
-      internalID: -1432281084959458757
+      spriteID: 569a6c76c3bd0a730800000000000000
+      internalID: 4008444720845334885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chlopsebigakoniecpraqie_ogien_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 18
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6be6257ee78acd0800000000000000
+      internalID: -2546646057292482884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chlopsebigakoniecpraqie_ogien_5
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 18
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a678ddc9abf17890800000000000000
+      internalID: -7461906400854640985
       vertices: []
       indices: 
       edges: []

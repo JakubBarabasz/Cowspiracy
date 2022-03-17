@@ -62,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
         coins = PlayerPrefs.GetFloat("playerCoins");
        //  Hitpoints = PlayerPrefs.GetFloat("playerHealth");
         //MaxHitpoints = PlayerPrefs.GetFloat("playerMaxHealth");
-        GetHealth(MaxHitpoints);
     }
     void Update()
     {
@@ -80,14 +79,16 @@ public class PlayerMovement : MonoBehaviour
         CoinsUIAmount.text = Convert.ToString(coins);
         float movementHorizontal = joystick.Horizontal;
 
-        if(movementHorizontal >= .2f)
+        if(joystick.Horizontal >= 0.3f)
         {
-            horizontalMove = MovementSpeed;
+            MovementSpeed = 3f;
+            transform.position += MovementSpeed * Time.deltaTime * new Vector3(MovementSpeed, 0, 0);
             anim.SetBool("isRunning", true);
         }
-        else if(movementHorizontal <= -.2f)
+        else if(joystick.Horizontal <= -0.3f)
         {
-            horizontalMove = -MovementSpeed;
+            MovementSpeed = 3f;
+            transform.position += MovementSpeed * Time.deltaTime * new Vector3(-MovementSpeed, 0, 0);
             anim.SetBool("isRunning", true);
         }
         else
@@ -96,8 +97,6 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
 
-        //_rigidbody.AddForce(Vector2.right * MovementSpeed);
-        transform.position += MovementSpeed * Time.deltaTime * new Vector3(movementHorizontal, 0, 0);
       
         if (!Mathf.Approximately(0, movementHorizontal))
             transform.rotation = movementHorizontal < 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
