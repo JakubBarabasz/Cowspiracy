@@ -7,7 +7,7 @@ public class PlayerShooting : MonoBehaviour
 {
     [SerializeField]
     public Animator anim;
-    public float coolDownTime = 2;
+    public float coolDownTime = 0.5f;
     public float nextFireTime = 0;
     public AudioSource getKnifes;
     public TextMeshProUGUI knifeUIAmount;
@@ -17,6 +17,7 @@ public class PlayerShooting : MonoBehaviour
     public AudioSource throwSound;
     void Start()
     {
+        coolDownTime = 0.5f;
         anim = GetComponent<Animator>();
         throwSound = GetComponent<AudioSource>();
        knifeAmount = PlayerPrefs.GetInt("playerKnifes");
@@ -40,21 +41,20 @@ public class PlayerShooting : MonoBehaviour
             if (knifeAmount > 0)
             {
                 StartCoroutine(AnimCOOLDown());
+                IEnumerator AnimCOOLDown()
+                {
+                    anim.SetBool("isThrowing", true);
+                    yield return new WaitForSecondsRealtime(0);
+                    throwSound.Play();
+                    knifeAmount--;
+                    var newKnife = Instantiate(knife) as GameObject;
+                    newKnife.transform.position = throwPos.position;
+                    newKnife.transform.rotation = transform.rotation;
+                    nextFireTime = Time.time + coolDownTime;
+                    anim.SetBool("isThrowing", false);
+                    Destroy(newKnife, 0.35f);
+                }
             }
         }
-    }
-
-    IEnumerator AnimCOOLDown()
-    {
-        anim.SetBool("isThrowing", true);
-        yield return new WaitForSecondsRealtime(0.15f);
-        throwSound.Play();
-        knifeAmount--;
-        var newKnife = Instantiate(knife) as GameObject;
-        newKnife.transform.position = throwPos.position;
-        newKnife.transform.rotation = transform.rotation;
-        nextFireTime = Time.time + coolDownTime;
-        Destroy(newKnife, 0.5f);
-        anim.SetBool("isThrowing", false);
     }
 }

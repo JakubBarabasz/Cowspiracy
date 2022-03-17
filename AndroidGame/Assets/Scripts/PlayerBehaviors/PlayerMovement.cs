@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalMove;
     private float verticalmove;
     public Vector3 respawnPoint;
-    public float MovementSpeed = 5;
+    public float MovementSpeed = 10;
     public bool isCollide = false;
     public float Hitpoints;
     public float MaxHitpoints;
@@ -61,7 +61,8 @@ public class PlayerMovement : MonoBehaviour
         //~TODO za ka¿dym razem przed kompilacj¹ zresetwoaæ Prefs
         coins = PlayerPrefs.GetFloat("playerCoins");
        //  Hitpoints = PlayerPrefs.GetFloat("playerHealth");
-        //MaxHitpoints = PlayerPrefs.GetFloat("playerMaxHealth");
+     //   MaxHitpoints = PlayerPrefs.GetFloat("playerMaxHealth");
+        
     }
     void Update()
     {
@@ -79,16 +80,14 @@ public class PlayerMovement : MonoBehaviour
         CoinsUIAmount.text = Convert.ToString(coins);
         float movementHorizontal = joystick.Horizontal;
 
-        if(joystick.Horizontal >= 0.3f)
+        if(movementHorizontal >= .2f)
         {
-            MovementSpeed = 3f;
-            transform.position += MovementSpeed * Time.deltaTime * new Vector3(MovementSpeed, 0, 0);
+            horizontalMove = MovementSpeed;
             anim.SetBool("isRunning", true);
         }
-        else if(joystick.Horizontal <= -0.3f)
+        else if(movementHorizontal <= -.2f)
         {
-            MovementSpeed = 3f;
-            transform.position += MovementSpeed * Time.deltaTime * new Vector3(-MovementSpeed, 0, 0);
+            horizontalMove = -MovementSpeed;
             anim.SetBool("isRunning", true);
         }
         else
@@ -97,6 +96,8 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
 
+        //_rigidbody.AddForce(Vector2.right * MovementSpeed);
+        transform.position += MovementSpeed * Time.deltaTime * new Vector3(movementHorizontal, 0, 0);
       
         if (!Mathf.Approximately(0, movementHorizontal))
             transform.rotation = movementHorizontal < 0 ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;

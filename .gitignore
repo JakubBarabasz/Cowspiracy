@@ -11,8 +11,9 @@
 /[Uu]ser[Ss]ettings/
 /obj/
 /Temp/
-/Library/
-
+Temp/*
+Library/*
+Build/*
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
