@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\InStageElementsControll\AddKnife.cs" />
     <Compile Include="Assets\Scripts\AudioControllers\DestroyMusic.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\Scripts\SettingsBehaviour.cs" />
     <Compile Include="Assets\Scripts\InStageElementsControll\SpikesDam.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\JumpButton.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
@@ -90,7 +91,8 @@
     <Compile Include="Assets\Scripts\InStageElementsControll\AddCoins.cs" />
     <Compile Include="Assets\Scripts\InStageElementsControll\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\PlayerShooting.cs" />
-    <Compile Include="Assets\Scripts\SettingsBehaviour.cs" />
+    <Compile Include="Assets\Scripts\EnemyBehaviour\FlyingEnemy.cs" />
+    <Compile Include="Assets\Scripts\EnemyBehaviour\ChaseControll.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
