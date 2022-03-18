@@ -3,15 +3,12 @@ using UnityEngine;
 public class AddHealth : MonoBehaviour
 {
     public float HP;
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-
-        var player = collision.collider.GetComponent<PlayerMovement>();
-        if (player)
+        if (collision.CompareTag("Player"))
         {
-            player.UpgradeMaxHealth(5);
-            player.GetHealth(HP);
+            collision.gameObject.GetComponent<PlayerMovement>().GetHealth(HP);
+            collision.gameObject.GetComponent<PlayerMovement>().UpgradeMaxHealth(5);
             Destroy(gameObject);
         }
     }

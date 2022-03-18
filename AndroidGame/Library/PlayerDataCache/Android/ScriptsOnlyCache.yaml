@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - DestroyMusic
     - DontDestroyMusic
     - EnemyBehaviour
+    - EnemyBomb
     - EnemyHealthBar
     - EnterHouseBehaviour
     - ExitHouseBehaviour
@@ -25,6 +26,7 @@ ScriptsOnlyBuild:
     - PlayerMovement
     - PlayerShooting
     - SpikesDam
+    - SpittingEnemy
     - StopGame
     - TypeWriterEffect
     Cinemachine.dll:
@@ -100,6 +102,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -680,13 +683,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 8964}
     - Class: 114
+      Script: {instanceID: 9272}
+    - Class: 114
       Script: {instanceID: 9830}
     - Class: 114
       Script: {instanceID: 10048}
     - Class: 114
+      Script: {instanceID: 10058}
+    - Class: 114
       Script: {instanceID: 10808}
     - Class: 114
       Script: {instanceID: 11176}
+    - Class: 114
+      Script: {instanceID: 205394}
+    - Class: 114
+      Script: {instanceID: 319610}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -829,6 +840,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9830}
     - Class: 114
       Script: {instanceID: 10048}
+    - Class: 114
+      Script: {instanceID: 10058}
     - Class: 114
       Script: {instanceID: 10808}
     - Class: 114
@@ -995,6 +1008,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10048}
     - Class: 114
+      Script: {instanceID: 10058}
+    - Class: 114
       Script: {instanceID: 10808}
     - Class: 114
       Script: {instanceID: 10966}
@@ -1129,6 +1144,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9830}
     - Class: 114
       Script: {instanceID: 10048}
+    - Class: 114
+      Script: {instanceID: 10058}
     - Class: 114
       Script: {instanceID: 10808}
     - Class: 114
@@ -2018,12 +2035,6 @@ ScriptsOnlyBuild:
     className: CinemachineCollisionImpulseSource
   - hash:
       serializedVersion: 2
-      Hash: 4d57904f185da126fc58b557d761a77f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SettingsBehaviour
-  - hash:
-      serializedVersion: 2
       Hash: 37de53a49708b087da4050fc1ca7a6ee
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -2906,7 +2917,7 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 672e7b9c0c1d1158d1cd5e280f7696fa
+      Hash: 884891f76581abcf69edcd21b5f6bed6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FlyingEnemy
@@ -2916,6 +2927,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChaseControll
+  - hash:
+      serializedVersion: 2
+      Hash: 73560e4e3d85b53e6b717204973acfcf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpittingEnemy
+  - hash:
+      serializedVersion: 2
+      Hash: 27843933bc2723390cfafa0bdb008229
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyBomb
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity

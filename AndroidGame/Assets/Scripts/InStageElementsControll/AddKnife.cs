@@ -12,14 +12,11 @@ public class AddKnife : MonoBehaviour
     {
         knifes = rnd.Next(minValue, maxValue);
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-
-        var player = collision.collider.GetComponent<PlayerShooting>();
-        if (player)
+        if (collision.CompareTag("Player"))
         {
-            player.GetKnife(knifes);
+            collision.gameObject.GetComponent<PlayerShooting>().GetKnife(knifes);
             Destroy(gameObject);
         }
     }

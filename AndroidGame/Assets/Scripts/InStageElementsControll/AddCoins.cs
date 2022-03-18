@@ -11,13 +11,12 @@ public class AddCoins : MonoBehaviour
     {
         coins = rnd.Next(minValue, maxValue);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
 
-        var player = collision.collider.GetComponent<PlayerMovement>();
-        if (player)
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
-            player.GetCoins(coins);
+            collision.gameObject.GetComponent<PlayerMovement>().GetCoins(coins);
             Destroy(gameObject);
         }
     }
