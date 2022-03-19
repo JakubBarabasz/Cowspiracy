@@ -8,10 +8,7 @@ public class FlyingEnemy : MonoBehaviour
     public bool chase = false;
     public Transform startingPoint;
     public GameObject player;
-    public Vector3 shootPoint;
-    public GameObject bullet;
-    private float timeBtwShots;
-    public float startTimeBtwShots;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -38,16 +35,6 @@ public class FlyingEnemy : MonoBehaviour
     private void Chase()
     {
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-        if (timeBtwShots < -0)
-        {
-            var newBullet = Instantiate(bullet, shootPoint, Quaternion.identity);
-            timeBtwShots = startTimeBtwShots;
-            Destroy(newBullet, 2f);
-        }
-        else
-        {
-            timeBtwShots -= Time.deltaTime;
-        }
     }
 
     private void ReturnStartPoint()

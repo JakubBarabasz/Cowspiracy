@@ -7,7 +7,7 @@ public class PlayerShooting : MonoBehaviour
 {
     [SerializeField]
     public Animator anim;
-    public float coolDownTime = 0.5f;
+    public float coolDownTime = 0.6f;
     public float nextFireTime = 0;
     public AudioSource getKnifes;
     public TextMeshProUGUI knifeUIAmount;
@@ -17,7 +17,7 @@ public class PlayerShooting : MonoBehaviour
     public AudioSource throwSound;
     void Start()
     {
-        coolDownTime = 0.5f;
+        coolDownTime = 0.6f;
         anim = GetComponent<Animator>();
         throwSound = GetComponent<AudioSource>();
        knifeAmount = PlayerPrefs.GetInt("playerKnifes");
