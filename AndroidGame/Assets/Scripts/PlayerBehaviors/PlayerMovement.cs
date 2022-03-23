@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public bool haveMoney;
     public GameObject InShopAlertNoMoney;
     public Animator anim;
+    public AudioSource playerGetDamage;
     public AudioSource healthSound;
     public AudioSource coinsSound;
     public Joystick joystick;
@@ -81,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         {
 
             //_rigidbody.AddForce(Vector2.right * MovementSpeed);
-            Vector3 targetVelocity = new Vector2(MovementSpeed * 8f, _rigidbody.velocity.y);
+            Vector3 targetVelocity = new Vector2(movementHorizontal * 15f, _rigidbody.velocity.y);
             _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
 
@@ -97,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
         else if (movementHorizontal <= -0.2f)
         {
             //_rigidbody.AddForce(Vector2.right * -MovementSpeed);
-            Vector3 targetVelocity = new Vector2(-MovementSpeed * 8f, _rigidbody.velocity.y);
+            Vector3 targetVelocity = new Vector2(movementHorizontal * 15f, _rigidbody.velocity.y);
             _rigidbody.velocity = Vector3.SmoothDamp(_rigidbody.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
 
@@ -123,6 +124,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
+        _rigidbody.gravityScale = 5;
         //~TODO za ka¿dym razem przed kompilacj¹ zresetwoaæ Prefs
         // PlayerPrefs.SetFloat("playerCoins", coins);
         //   PlayerPrefs.SetFloat("playerHealth", Hitpoints);
@@ -168,6 +171,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeHit(float damage)
     {
+        playerGetDamage.Play();
         Hitpoints -= damage;
     }
     public void GetHealth(float damage)
