@@ -53,6 +53,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
+    Unity.Mobile.AndroidLogcat.Editor.dll:
+    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.RenderPipelines.Core.Runtime.dll:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -382,6 +384,15 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Settings.unity:
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     Assets/Scenes/StageEight.unity:
     - Class: 1
@@ -1327,6 +1338,149 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 19719996
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
+      Script: {instanceID: 0}
+    Assets/Scenes/StageThree.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
+    - Class: 68
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 820}
+    - Class: 114
+      Script: {instanceID: 1652}
+    - Class: 114
+      Script: {instanceID: 1658}
+    - Class: 114
+      Script: {instanceID: 2298}
+    - Class: 114
+      Script: {instanceID: 2478}
+    - Class: 114
+      Script: {instanceID: 3212}
+    - Class: 114
+      Script: {instanceID: 3316}
+    - Class: 114
+      Script: {instanceID: 3414}
+    - Class: 114
+      Script: {instanceID: 4078}
+    - Class: 114
+      Script: {instanceID: 4200}
+    - Class: 114
+      Script: {instanceID: 4212}
+    - Class: 114
+      Script: {instanceID: 4650}
+    - Class: 114
+      Script: {instanceID: 4706}
+    - Class: 114
+      Script: {instanceID: 4736}
+    - Class: 114
+      Script: {instanceID: 4798}
+    - Class: 114
+      Script: {instanceID: 4966}
+    - Class: 114
+      Script: {instanceID: 5066}
+    - Class: 114
+      Script: {instanceID: 5324}
+    - Class: 114
+      Script: {instanceID: 5462}
+    - Class: 114
+      Script: {instanceID: 5662}
+    - Class: 114
+      Script: {instanceID: 5680}
+    - Class: 114
+      Script: {instanceID: 6548}
+    - Class: 114
+      Script: {instanceID: 6680}
+    - Class: 114
+      Script: {instanceID: 7146}
+    - Class: 114
+      Script: {instanceID: 7272}
+    - Class: 114
+      Script: {instanceID: 7822}
+    - Class: 114
+      Script: {instanceID: 8154}
+    - Class: 114
+      Script: {instanceID: 8204}
+    - Class: 114
+      Script: {instanceID: 8376}
+    - Class: 114
+      Script: {instanceID: 8460}
+    - Class: 114
+      Script: {instanceID: 8950}
+    - Class: 114
+      Script: {instanceID: 8966}
+    - Class: 114
+      Script: {instanceID: 9832}
+    - Class: 114
+      Script: {instanceID: 10050}
+    - Class: 114
+      Script: {instanceID: 10060}
+    - Class: 114
+      Script: {instanceID: 10810}
+    - Class: 114
+      Script: {instanceID: 10868}
+    - Class: 114
+      Script: {instanceID: 11180}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -3347,4 +3501,6 @@ ScriptsOnlyBuild:
   - Assets/Scenes/StageSix.unity
   - Assets/Scenes/StageTwo.unity
   - Assets/Scenes/deletelater.unity
+  - Assets/Scenes/StageThree.unity
+  - Assets/Scenes/Settings.unity
   playerPath: C:/Users/barab/Desktop/Cowspiracy.apk

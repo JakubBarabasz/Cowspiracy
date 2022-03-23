@@ -9,7 +9,7 @@ public class JumpButton : MonoBehaviour
 	public float checkRadious;
 	public bool isGrounded = false;
 	public float jumpSpeed = 1f;
-	public float jumpForce = 0.00002f;
+	public float jumpForce = 23f;
 	private bool canjump;
 	public Rigidbody2D _rigidbody;
 	public Joystick joystick;
@@ -17,6 +17,7 @@ public class JumpButton : MonoBehaviour
 
 	void Start()
     {
+		jumpForce = 23f;
 		canjump = true;
 		_rigidbody = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
@@ -24,6 +25,7 @@ public class JumpButton : MonoBehaviour
 
     void Update()
 	{
+		jumpForce = 23f;
 		isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadious, whatIsGround);
         if (isGrounded)
         {
