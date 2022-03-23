@@ -56,10 +56,12 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EnemyBehaviour\ChaseControll.cs" />
     <Compile Include="Assets\Scripts\CowsBehaviours\FindCheck.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\MoveByTouch.cs" />
+    <Compile Include="Assets\Scripts\EnemyBehaviour\FlyingEnemy.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\PlayerHealthbar.cs" />
     <Compile Include="Assets\Scripts\CowsBehaviours\FlagBehaviour.cs" />
     <Compile Include="Assets\Scripts\InStageElementsControll\MovingPlatformHorizontal.cs" />
@@ -67,6 +69,7 @@
     <Compile Include="Assets\Scripts\PlayerBehaviors\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyBehaviour\EnemyHealthBar.cs" />
     <Compile Include="Assets\Scripts\EnemyBehaviour\Patrol.cs" />
+    <Compile Include="Assets\Scripts\EnemyBehaviour\EnemyBomb.cs" />
     <Compile Include="Assets\Scripts\UI\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\InStageElementsControll\ExitHouseBehaviour.cs" />
     <Compile Include="Assets\Scripts\InStageElementsControll\AddKnife.cs" />
@@ -88,12 +91,9 @@
     <Compile Include="Assets\Scripts\EnemyBehaviour\EnemyBehaviour.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Scripts\InStageElementsControll\AddCoins.cs" />
+    <Compile Include="Assets\Scripts\EnemyBehaviour\SpittingEnemy.cs" />
     <Compile Include="Assets\Scripts\InStageElementsControll\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\PlayerShooting.cs" />
-    <Compile Include="Assets\Scripts\EnemyBehaviour\FlyingEnemy.cs" />
-    <Compile Include="Assets\Scripts\EnemyBehaviour\ChaseControll.cs" />
-    <Compile Include="Assets\Scripts\EnemyBehaviour\SpittingEnemy.cs" />
-    <Compile Include="Assets\Scripts\EnemyBehaviour\EnemyBomb.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

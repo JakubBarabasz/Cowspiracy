@@ -10,7 +10,7 @@ public class EnemyBomb : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerMovement>().TakeHit(1);
+            collision.gameObject.GetComponent<PlayerMovement>().TakeHit(hitsPoints);
             Destroy(gameObject);
         }
     }

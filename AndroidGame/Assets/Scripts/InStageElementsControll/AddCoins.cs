@@ -3,8 +3,8 @@ using Random = System.Random;
 
 public class AddCoins : MonoBehaviour
 {
-    int minValue = 4;
-    int maxValue = 10;
+    public int minValue = 4;
+    public int maxValue = 10;
     Random rnd = new Random();
     private int coins;
     void Start()

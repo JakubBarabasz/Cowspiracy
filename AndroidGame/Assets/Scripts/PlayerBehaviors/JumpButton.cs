@@ -29,9 +29,11 @@ public class JumpButton : MonoBehaviour
         {
 			anim.SetBool("isJumping", false);
 		}
-        else
-        {
+		if (!isGrounded)
+		{
 			anim.SetBool("isJumping", true);
+			anim.SetBool("isRunning", false);
+
 		}
 		movementVertical = joystick.Vertical;
 		StartLetsJump();

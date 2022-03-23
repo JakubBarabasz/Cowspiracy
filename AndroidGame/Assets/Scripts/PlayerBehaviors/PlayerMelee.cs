@@ -12,8 +12,16 @@ public class PlayerMelee : MonoBehaviour
     public GameObject InvisiblePunch;
     public Transform meleePos;
     public int whatSound;
+
+    public Animator anim;
+    public float coolDownTime = 0.4f;
+
+    public float nextPunchTime = 0;
+
     void Start()
     {
+        coolDownTime = 0.4f;
+        anim = GetComponent<Animator>();
     }
     public void Update()
     {
@@ -24,25 +32,36 @@ public class PlayerMelee : MonoBehaviour
     public void Punch()
     {
 
-        var newPunch = Instantiate(InvisiblePunch) as GameObject;
-        newPunch.transform.position = meleePos.position;
-        newPunch.transform.rotation = transform.rotation;
-
-        Destroy(newPunch, 0.1f);
-        if (whatSound == 1)
+        if (Time.time > nextPunchTime)
         {
-            punch01.Play();
-        }else if(whatSound == 2)
-        {
-            punch02.Play();
-        }
-        else if (whatSound == 3)
-        {
-            punch03.Play();
-        }
-        else if (whatSound == 4)
-        {
-            punch04.Play();
+            StartCoroutine(AnimCOOLDown());
+            IEnumerator AnimCOOLDown()
+            {
+                anim.SetBool("isHitting", true);
+                yield return new WaitForSecondsRealtime(0);
+                if (whatSound == 1)
+                {
+                    punch01.Play();
+                }
+                else if (whatSound == 2)
+                {
+                    punch02.Play();
+                }
+                else if (whatSound == 3)
+                {
+                    punch03.Play();
+                }
+                else if (whatSound == 4)
+                {
+                    punch04.Play();
+                }
+                var newPunch = Instantiate(InvisiblePunch) as GameObject;
+                newPunch.transform.position = meleePos.position;
+                newPunch.transform.rotation = transform.rotation;
+                nextPunchTime = Time.time + coolDownTime;
+                anim.SetBool("isHitting", false);
+                Destroy(newPunch, 0.35f);
+            }
         }
     }
 }

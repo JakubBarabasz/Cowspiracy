@@ -17,14 +17,14 @@ public class PlayerShooting : MonoBehaviour
     public AudioSource throwSound;
     void Start()
     {
-        coolDownTime = 0.6f;
+        coolDownTime = 0.2f;
         anim = GetComponent<Animator>();
         throwSound = GetComponent<AudioSource>();
-       knifeAmount = PlayerPrefs.GetInt("playerKnifes");
+   //    knifeAmount = PlayerPrefs.GetInt("playerKnifes");
     }
     public void Update()
     {
-        PlayerPrefs.SetInt("playerKnifes", knifeAmount);
+      //  PlayerPrefs.SetInt("playerKnifes", knifeAmount);
         knifeUIAmount.text = Convert.ToString(knifeAmount);
     }
     public int GetKnife(int knifes)
@@ -36,23 +36,25 @@ public class PlayerShooting : MonoBehaviour
     //Strzał
     public void Shoot()
     {
-            if (Time.time > nextFireTime)
+        if (Time.time > nextFireTime)
         {
+            anim.SetBool("isThrowing", false);
+
             if (knifeAmount > 0)
             {
+                anim.SetBool("isThrowing", true);
                 StartCoroutine(AnimCOOLDown());
                 IEnumerator AnimCOOLDown()
                 {
-                    anim.SetBool("isThrowing", true);
-                    yield return new WaitForSecondsRealtime(0);
                     throwSound.Play();
                     knifeAmount--;
                     var newKnife = Instantiate(knife) as GameObject;
                     newKnife.transform.position = throwPos.position;
                     newKnife.transform.rotation = transform.rotation;
                     nextFireTime = Time.time + coolDownTime;
-                    anim.SetBool("isThrowing", false);
+                    yield return new WaitForSecondsRealtime(0.15f);
                     Destroy(newKnife, 0.35f);
+                    anim.SetBool("isThrowing", false);
                 }
             }
         }

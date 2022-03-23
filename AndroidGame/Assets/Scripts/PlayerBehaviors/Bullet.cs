@@ -3,9 +3,10 @@ using Random = System.Random;
 public class Bullet : MonoBehaviour
 {
     public bool randomHit;
-    public int hitsPoints;
+    public int hitsPoints = 4;
     public Rigidbody2D _rigidbody;
     public float Speed;
+
 
 
     private void FixedUpdate()
@@ -14,14 +15,14 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        hitsPoints = 4;
         var enemy = collision.collider.GetComponent<EnemyBehaviour>();
         if (randomHit)
         {
             Random rand = new Random();
             if (enemy)
             {
-                enemy.TakeHit(rand.Next(1,5));
+                enemy.TakeHit(rand.Next(3, 4));
                 Destroy(gameObject);
             }
         }

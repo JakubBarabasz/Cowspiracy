@@ -4,7 +4,7 @@ public class Patrol : MonoBehaviour
 {
     public float speed;
     public float distance;
-    private bool movingRight = true;
+    public bool movingRight = true;
 
     public Transform groundDetection;
 
@@ -25,5 +25,14 @@ public class Patrol : MonoBehaviour
                 movingRight = true;
             }
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "upElement")
+        {
+            movingRight = true;
+        }
+   
     }
 }

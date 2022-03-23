@@ -3,8 +3,8 @@ using Random = System.Random;
 
 public class AddKnife : MonoBehaviour
 {
-    int minValue = 1;
-    int maxValue = 6;
+    public int minValue = 1;
+    public int maxValue = 6;
 
     Random rnd = new Random();
     private int knifes;

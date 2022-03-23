@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/About.unity
     guid: 030a86e4e470c734ba623bfa5a66f0e9
   - enabled: 1
-    path: Assets/Scenes/Settings.unity
-    guid: a4ab03bc2d30a4f4592c220c6278fdf9
-  - enabled: 1
     path: Assets/Scenes/StageFive.unity
     guid: 12a8d89ff1c08fd47ace2695b1e634c8
   - enabled: 1
@@ -42,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StageTwo.unity
     guid: 4830d3fd88c786947807814ae486d138
   - enabled: 1
-    path: Assets/Scenes/StageThree.unity
+    path: Assets/Scenes/deletelater.unity
     guid: b62c40e79775ae04abccc1c77ddfc609
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d6e21b5c4736f304e8e8852136fb7437, type: 2}
