@@ -94,6 +94,7 @@
     <Compile Include="Assets\Scripts\EnemyBehaviour\SpittingEnemy.cs" />
     <Compile Include="Assets\Scripts\InStageElementsControll\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviors\PlayerShooting.cs" />
+    <Compile Include="Assets\Scripts\InStageElementsControll\timePlatform.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

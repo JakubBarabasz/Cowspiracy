@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject ShopScreen;
     public bool isCollEnemy = false;
     private Vector3 m_Velocity = Vector3.zero;
-    [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
+    [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = 0.139f;	// How much to smooth out the movement
 
     void Start()
     {
@@ -124,8 +124,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
-        _rigidbody.gravityScale = 5;
+        m_MovementSmoothing = 0.139f;
+        _rigidbody.gravityScale = 4.85f;
         //~TODO za ka¿dym razem przed kompilacj¹ zresetwoaæ Prefs
         // PlayerPrefs.SetFloat("playerCoins", coins);
         //   PlayerPrefs.SetFloat("playerHealth", Hitpoints);

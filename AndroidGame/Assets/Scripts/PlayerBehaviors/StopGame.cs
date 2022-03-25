@@ -30,7 +30,6 @@ public class StopGame : MonoBehaviour
     public void Stop()
     {
         StopScreen.gameObject.SetActive(true);
-        Time.timeScale = 0;
         Controlls1.gameObject.SetActive(false);
         Controlls2.gameObject.SetActive(false);
         Controlls3.gameObject.SetActive(false);
@@ -44,7 +43,6 @@ public class StopGame : MonoBehaviour
     public void Resume()
     {
         StopScreen.gameObject.SetActive(false);
-        Time.timeScale = 1;
         Controlls1.gameObject.SetActive(true);
         Controlls2.gameObject.SetActive(true);
         Controlls3.gameObject.SetActive(true);

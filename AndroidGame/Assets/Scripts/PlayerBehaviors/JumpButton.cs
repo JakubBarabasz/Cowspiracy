@@ -6,7 +6,7 @@ public class JumpButton : MonoBehaviour
 	public Animator anim;
 	public Transform feetPos;
 	public LayerMask whatIsGround;
-	public float checkRadious;
+	public float checkRadious = 0.1f;
 	public bool isGrounded = false;
 	public float jumpSpeed = 1f;
 	public float jumpForce = 23f;
@@ -25,6 +25,7 @@ public class JumpButton : MonoBehaviour
 
     void Update()
 	{
+		checkRadious = 0.13f;
 		jumpForce = 23f;
 		isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadious, whatIsGround);
         if (isGrounded)

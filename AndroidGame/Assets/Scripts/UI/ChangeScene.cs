@@ -1,26 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    [System.Obsolete]
-    public GameObject StageControll;
-
-    [System.Obsolete]
-    private void Start()
+    public Animator transition;
+    public float transitionTime = 1f;
+    public void ChangeToScene(string sceneChangeTo)
     {
-        StageControll.gameObject.SetActive(false);
-        Time.timeScale = 1;
-    }
-    public void ChangeToScene(string sceneChangeto)
-    {
-        Application.LoadLevel(sceneChangeto);
+        StartCoroutine(LoadLevel(sceneChangeTo));
     }
     public void Quit()
     {
         Application.Quit();
 
+    }
+    IEnumerator LoadLevel(string nextScene)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(nextScene);
     }
 
 }

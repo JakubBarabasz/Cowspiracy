@@ -205,7 +205,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252888053}
+      - m_Target: {fileID: 1792323150}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: ChangeToScene
         m_Mode: 5
@@ -216,7 +216,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: StageSeven
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &31301060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,50 +350,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107563240}
   m_CullTransparentMesh: 1
---- !u!1 &252888052
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 252888054}
-  - component: {fileID: 252888053}
-  m_Layer: 0
-  m_Name: SceneMenager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &252888053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252888052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0852eef0a4c278c4fa3b49017a59006e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StageControll: {fileID: 252888052}
---- !u!4 &252888054
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252888052}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &282297469
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +507,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252888053}
+      - m_Target: {fileID: 1792323150}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: ChangeToScene
         m_Mode: 5
@@ -562,7 +518,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: StageTwo
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &547124785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,7 +639,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252888053}
+      - m_Target: {fileID: 1792323150}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: ChangeToScene
         m_Mode: 5
@@ -694,7 +650,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: StageSix
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &566912746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,7 +922,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252888053}
+      - m_Target: {fileID: 1792323150}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: ChangeToScene
         m_Mode: 5
@@ -977,7 +933,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: StageThree
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &801393692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,7 +1054,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252888053}
+      - m_Target: {fileID: 1792323150}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: ChangeToScene
         m_Mode: 5
@@ -1109,7 +1065,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: Main
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &895511187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,7 +1186,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252888053}
+      - m_Target: {fileID: 1792323150}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: ChangeToScene
         m_Mode: 5
@@ -1241,7 +1197,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: StageFour
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &931780691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1474,7 +1430,7 @@ Transform:
   m_Children:
   - {fileID: 1114857337}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1290766578
 GameObject:
@@ -1558,7 +1514,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252888053}
+      - m_Target: {fileID: 1792323150}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: ChangeToScene
         m_Mode: 5
@@ -1569,7 +1525,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: StageNine
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1290766581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1690,7 +1646,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252888053}
+      - m_Target: {fileID: 1792323150}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: ChangeToScene
         m_Mode: 5
@@ -1701,7 +1657,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: StageFive
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1410460934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1880,8 +1836,76 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1792323149
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2672086843976374857, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672086843976374857, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1480
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672086843976374857, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672086843976374857, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672086843976374857, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672086843976374857, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672086843976374857, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672086843976374857, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672086843976374857, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672086843976374857, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672086843976374857, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672086843976374859, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+      propertyPath: m_Name
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+--- !u!114 &1792323150 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2672086843976374858, guid: c6032ae4ece550341b180fc24b5c4dcb, type: 3}
+  m_PrefabInstance: {fileID: 1792323149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0852eef0a4c278c4fa3b49017a59006e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1868701148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,7 +1988,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252888053}
+      - m_Target: {fileID: 1792323150}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: ChangeToScene
         m_Mode: 5
@@ -1975,7 +1999,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: StageOne
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1868701151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2096,7 +2120,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 252888053}
+      - m_Target: {fileID: 1792323150}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: ChangeToScene
         m_Mode: 5
@@ -2107,7 +2131,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: StageEight
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1893225988
 MonoBehaviour:
   m_ObjectHideFlags: 0
