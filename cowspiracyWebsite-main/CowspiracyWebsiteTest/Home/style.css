@@ -1,0 +1,183 @@
+* {box-sizing:border-box}
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323', monospace;}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+}
+  
+li{
+    float: left;
+}
+  
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+li a:hover{
+    transition: 400ms;
+    background-color: #BB86FC;
+}
+
+#mid{
+    width: 60%;
+    height: 1004px;
+    float: left;
+    display: block;
+    background-color: #121212;
+    color: white;
+}
+
+#left, #right {
+    float: left;
+    height: 1004px;
+    width: 20%;
+    display: block;
+    background-color: #121212;
+}
+
+#main{
+    padding-top: 5%;
+}
+
+#title{
+    text-align: center;
+}
+#addition{
+    text-align: center;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+.mySlides {
+    display: none;
+}
+  
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #BB86FC;
+}
+  
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+#link{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.btn {
+    background-color: #121212;
+    border: 3px;
+    border-color: #BB86FC;
+    border-radius: 2%;
+    color: #BB86FC;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+.btn:hover {
+    transition: 400ms;
+    background-color: #BB86FC;
+    color: white;
+}
+
+#footer{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    float: right;
+    clear: both;
+}
+
+/*Desktop*/
+@media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%;
+    }
+}
+
+/*Mobile*/
+@media only screen and (max-width: 620px) {
+    .menu, .main, .right {
+      width: 100%;
+    }
+}

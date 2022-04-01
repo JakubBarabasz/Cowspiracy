@@ -1,0 +1,216 @@
+* {box-sizing:border-box}
+a.btn{
+    text-decoration:none;
+}
+#logo{
+    width: 120px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "orange_kidregular";
+}
+ul{
+    z-index: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+}
+  
+li{
+    float: left;
+}
+  
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+li a:hover{
+    transition: 400ms;
+    background-color: #62ae69;
+}
+
+#mid{
+    width: 90%;
+    height: 1504px;
+    float: left;
+    display: block;
+    background-color: #121212;
+    color: white;
+    font-size: 18px;
+}
+
+#left, #right {
+    float: left;
+    height: 1504px;
+    width: 5%;
+    display: block;
+    background-color: #121212;
+}
+
+#main{
+    padding-top: 5%;
+}
+
+#title{
+    text-align: center;
+    font-family: "orange_kidregular";
+    font-size: 65px;
+}
+#addition{
+    text-align: center;
+    font-family: "orange_kidregular";
+    font-size: 25px;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+.mySlides {
+    display: none;
+}
+  
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #62ae69;
+}
+  
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+#link{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.btn {
+    background-color: #121212;
+    border: 3px;
+    border-color: #62ae69;
+    border-radius: 2%;
+    color: #62ae69;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+  
+.btn:hover {
+    transition: 400ms;
+    background-color: #62ae69;
+    color: white;
+}
+
+#footer{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    float: right;
+    clear: both;
+}
+
+/*Desktop*/
+@media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%;
+    }
+}
+
+/*Mobile*/
+@media only screen and (max-width: 620px) {
+    .menu, .main, .right {
+      width: 100%;
+    }
+}
+
+/*gowno z podstron*/
+
+#paypal{
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'orange_kidregular';
+    src: url('orangekid/orange_kid-webfont.woff2') format('woff2'),
+         url('orangekid/orange_kid-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#authors{
+    text-align: center;
+    font-family: "orange_kidregular";
+    font-size: 18px;
+}
